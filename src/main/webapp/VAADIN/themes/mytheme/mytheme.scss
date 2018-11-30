@@ -1,0 +1,92 @@
+// If you edit this file you need to compile the theme. See README.md for details.
+// Global variable overrides. Must be declared before importing Valo.
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+//$v-font-size: 16px;
+//$v-font-weight: 300;
+//$v-font-family: "Open Sans", sans-serif;
+// Defines the border used by all components.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+// Affects the visual appearance of all components
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+// Defines colors for indicating status (focus, success, failure)
+//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+@import "../valo/valo.scss";
+
+@mixin mytheme {
+  @include valo;
+  // Insert your own theme rules here
+  .mytheme .v-nativebutton {
+    color: blue;
+  }
+  .search-line {
+    font-family: "Arial", sans-serif;
+    width: 400px;
+    height: 40px;
+    border-radius: 25px;
+    float: left;
+    border: 1.5px solid grey;
+  }
+
+  .search-button {
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+    float: left;
+    border: 1.5px solid grey;
+    background: url("image/search-32.png") no-repeat center;
+  }
+
+  .search-button:hover {
+    border: 2px solid lightgray;
+  }
+
+  .next-button {
+    border: 2px solid black;
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    background: url("image/next.png") no-repeat center;
+  }
+
+  .back-button {
+    border: 2px solid black;
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    background: url("image/back.png") no-repeat center;
+  }
+
+  .back-button:hover {
+    border: 2px solid lightgray;
+  }
+
+  .next-button:hover {
+    border: 2px solid lightgray;
+  }
+
+  .title {
+    font-size: 20px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(#f7f7f7, rgba(0, 0, 0, 0.79));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .result_list {
+    font-family: "Arial", sans-serif;
+    border: 2px;
+    width: 70%;
+  }
+}
